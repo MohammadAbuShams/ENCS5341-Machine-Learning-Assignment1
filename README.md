@@ -1,43 +1,70 @@
 # Car Fuel Consumption Analysis
 
-This project analyzes a dataset of cars with a focus on fuel consumption (mpg - miles per gallon). The analysis covers various aspects of data exploration, preprocessing, and machine learning to predict fuel efficiency using Python.
+This repository contains a Python-based analysis of a car dataset, focusing on fuel consumption and the relationships between various car features. The analysis includes data preparation, feature imputation, and model implementation using linear and quadratic regression, as well as gradient descent.
 
 ## Objectives
 
-1. **Data Exploration**:
-   - Load and explore the dataset (number of features and examples).
-   - Identify missing values in the dataset.
+1. **Data Preparation**
+   - Load and examine the dataset.
+   - Identify features with missing values and handle them appropriately.
+   - Visualize the dataset using histograms and box plots.
 
-2. **Data Preprocessing**:
-   - Impute missing values using appropriate methods such as mean, median, or mode.
+2. **Polynomial and Ridge Regression**
+   - Implement polynomial regression with degrees ranging from 1 to 10.
+   - Apply ridge regression and find the optimal regularization parameter.
 
-3. **Data Analysis**:
-   - Compare fuel economy between different countries using visualizations (box plots).
-   - Investigate the distribution of features like `acceleration`, `horsepower`, and `mpg` to determine their resemblance to a Gaussian distribution (histograms).
-
-4. **Correlation Analysis**:
-   - Analyze the relationship between `horsepower` and `mpg` using scatter plots and examine correlations.
-
-5. **Machine Learning**:
-   - Implement Simple Linear Regression (closed-form solution) to predict `mpg` based on `horsepower`.
-   - Extend the model to a quadratic form (f = w0 + w1x + w2x²).
-   - Implement Gradient Descent to solve the linear regression problem.
+3. **Logistic Regression**
+   - Implement logistic regression with linear and quadratic decision boundaries.
+   - Compare model performances in terms of accuracy.
 
 ## Dataset
 
-The dataset (`cars.csv`) contains information about various car attributes, including:
-- `mpg`: Miles per gallon (fuel consumption).
-- `horsepower`: Horsepower of the car.
-- `acceleration`: Time taken to reach a certain speed.
-- `origin`: The country of origin.
+- `cars.csv`: Contains data on car features including fuel consumption, horsepower, and more.
 
-This dataset is used to analyze fuel efficiency, perform regression analysis, and make predictions based on car attributes.
+## Implementation
 
+### Part 1: Dataset Examination
 
-### Prerequisites
+- Read the dataset using Pandas and determine the number of features and examples.
 
-- Python 3.
-- Jupyter Notebook.
-- Libraries: Pandas, NumPy, Matplotlib, Seaborn.
+### Part 2: Missing Values
 
+- Identify features with missing values and count them.
 
+### Part 3: Imputation
+
+- Fill missing values using mean for numerical features and mode for categorical features.
+
+### Part 4: Fuel Economy Analysis
+
+- Use a box plot to compare fuel economy (MPG) across different countries of manufacture.
+
+### Part 5: Feature Distribution
+
+- Analyze the distribution of features ('acceleration', 'horsepower', 'mpg') using histograms and determine which feature most closely resembles a Gaussian distribution.
+
+### Part 6: Quantitative Measure
+
+- Use skewness and kurtosis to quantitatively assess the Gaussian-like distribution of features.
+
+### Part 7: Scatter Plot Analysis
+
+- Plot 'horsepower' against 'mpg' to observe the correlation between them.
+
+### Part 8: Linear Regression
+
+- Implement the closed-form solution of linear regression to predict 'mpg' from 'horsepower' and plot the regression line.
+
+### Part 9: Quadratic Regression
+
+- Extend the linear regression model to a quadratic function and visualize the quadratic regression curve.
+
+### Part 10: Gradient Descent
+
+- Implement gradient descent to learn a linear model for predicting 'mpg' from 'horsepower' and plot the results.
+
+## Prerequisites
+
+- Python 3
+- Jupyter Notebook
+- Required Libraries: `pandas`, `numpy`, `matplotlib`, `scikit-learn`, `scipy`
